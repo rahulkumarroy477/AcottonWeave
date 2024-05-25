@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 20vh 20vw 0 10vw;
+    display: flex;
+}
+
+#left,
+#middle,
+#right {
+    height: 100%;
+}
+
+#left {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+#title {
+    font-size: 5vw;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#left-bottom {
+    height: 45%;
+}
+
+#left-bottom-content {
+    margin-top: 40px;
+    height: 80%;
+}
+
+#left-bottom-content h4 {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+#left-bottom-content p {
+    width: 70%;
+    margin-top: 20px;
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+#middle {
+    width: 10vw;
+    position: relative;
+}
+
+#right {
+    flex: 3;
+}
+
+#left-btn {
+    border-radius: 40px;
+    border: 1px solid black;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+#left-btn h4 {
+    width: 50%;
+}
+
+#left-btn span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+#left-btn :nth-child(3) {
+    background-color: black;
+}
+
+#middle h4 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 20vw;
+    position: absolute;  /* Add this */
+    bottom: 10%;  /* Add this */
+    left: 80%;  /* Add this */
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    margin: 0;  /* Ensure no default margin */
+}
+#right{
+    display: flex;
+    flex-direction: column;
+}
+#right-top{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#stars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+#stars i{
+    margin-right: 2px;
+}
+#stars h4{
+    margin-right: 5px;
+}
+
+#right-bottom-banner{
+    background: url(./model-Image.jpg);
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
