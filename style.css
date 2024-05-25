@@ -9,6 +9,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    overflow: hidden; /* Prevent scrollbar if any content overflows */
 }
 
 #main {
@@ -17,6 +18,7 @@ body {
     background-color: white;
     padding: 20vh 20vw 0 10vw;
     display: flex;
+    overflow: hidden; /* Prevent scrollbar if any content overflows */
 }
 
 #left,
@@ -29,7 +31,7 @@ body {
     flex: 5;
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 #title {
@@ -66,6 +68,9 @@ body {
 
 #right {
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure it takes up all available space */
 }
 
 #left-btn {
@@ -98,41 +103,42 @@ body {
     font-size: 20px;
     letter-spacing: 2px;
     width: 20vw;
-    position: absolute;  /* Add this */
-    bottom: 10%;  /* Add this */
-    left: 80%;  /* Add this */
+    position: absolute; 
+    bottom: 10%; 
+    left: 80%; 
     transform: rotate(-90deg);
     transform-origin: left bottom;
-    margin: 0;  /* Ensure no default margin */
+    margin: 0;  
 }
-#right{
-    display: flex;
-    flex-direction: column;
-}
-#right-top{
+
+#right-top {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#stars{
+
+#stars {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 10px;
 }
-#stars i{
+
+#stars i {
     margin-right: 2px;
 }
-#stars h4{
+
+#stars h4 {
     margin-right: 5px;
 }
 
-#right-bottom-banner{
+#right-bottom-banner {
     background: url(./model-Image.jpg);
     width: 100%;
-    height: 90%;
+    height: calc(90% - 20px); /* Adjust height to fit within parent container */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: 10px; /* Added margin to separate from top content */
 }
